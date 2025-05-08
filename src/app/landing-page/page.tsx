@@ -75,8 +75,21 @@ export default function HomePage() {
       </aside>
 
       {/* Fixed Right Sidebar */}
-      <aside className="fixed top-20 right-0 w-38 h-[calc(100vh-5rem)] bg-gray-700 z-40 flex items-center justify-center">
-        <span className="text-white rotate-90">Right</span>
+      <aside className="fixed top-20 right-0 w-32 h-[calc(100vh-5rem)] bg-gray-800 z-40 flex flex-col items-center justify-end">
+        {/* Rotated Email Container */}
+        <div className="flex flex-col items-center">
+          <div className="transform rotate-90">
+            <a 
+              href="mailto:amr.mzfr.dev@outlook.com"
+              className="text-white whitespace-nowrap tracking-widest text-sm hover:text-yellow-400"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              amr.mzfr.dev@outlook.com
+            </a>
+          </div>
+          {/* Line under rotated text */}
+          <div className="mt-28 h-24 w-[1px] bg-white" />
+        </div>
       </aside>
 
       {/* Main Content */}
@@ -90,15 +103,24 @@ export default function HomePage() {
       >
         <div className="text-white py-6">
           <h1 className="text-sm text-yellow-400">Given name,</h1>
-          <p className="mt-8 text-7xl font-bold text-purple-700" style={{ fontFamily: "sans-serif" }}>
+          <p className="mt-7 text-6xl font-extrabold text-gray-200" style={{ fontFamily: "sans-serif" }}>
             Muzaffar Amir.
           </p>
-          <p className="mt-8 text-7xl font-bold text-gray-500" style={{ fontFamily: "sans-serif"}}>
-            Fullstack Developer in the making.
+          <p className="mt-4 text-6xl font-extrabold text-gray-400 w-200" style={{ fontFamily: "sans-serif" }}>
+            Fullstack Developer.
           </p>
-          <p className="mt-8 text-lg">
-            Fullstack Developer in the making.
+          <p className="mt-8 text-base w-120 text-justify leading-loose text-gray-200" style={{ fontFamily: "sans-serif" }}>
+            I’m a fullstack developer in the making — which is just a fancy way of saying I Google things for a living and occasionally stack code until it sort of works.
           </p>
+          <div className="relative inline-block group mt-12">
+            {/* Colored background left behind */}
+            <div className="absolute inset-0 bg-yellow-400 rounded-sm transition duration-300 opacity-0 group-hover:opacity-100"></div>
+
+            {/* Floating Button */}
+            <button className="relative z-10 px-6 py-3 border border-yellow-400 bg-gray-800 text-yellow-400 rounded-sm transition transform duration-300 group-hover:-translate-y-1 group-hover:-translate-x-1">
+              Check out this dummy button!
+            </button>
+          </div>
           <div className="h-[200vh]" /> {/* Just for demo scroll */}
         </div>
       </main>
